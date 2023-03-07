@@ -9,7 +9,7 @@ str0 = "and is 0"
 str6 = "and is less than 6 and not 0"
 if last_digit > 5:
   print(f"{str1}{number}{str2}{last_digit}{str5}")
-elif last_digit = 5:
+elif last_digit == 0:
   print(f"{str1}{number}{str2}{last_digit}{str0}")
 else:
   print(f"{str1}{number}{str2}{last_digit}{str6}")
