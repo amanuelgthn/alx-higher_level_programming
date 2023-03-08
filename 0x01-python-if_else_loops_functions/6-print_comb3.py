@@ -3,4 +3,4 @@ for decimal in range(0, 10):
     for last_digit in range(0, 10):
         if(last_digit > decimal):
              print("{}".format(decimal))
-             print("{}, ".format(decimal))
+             print("{}, ".format(last_digit))
