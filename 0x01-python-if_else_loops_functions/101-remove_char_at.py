@@ -9,4 +9,7 @@ def remove_char_at(str, n):
             str2.append(str[i])
         i = i + 1
         j = j + 1
-    return ",".join(str2)
+    if n >= 0 and n < str_len:
+        return join(str2)
+    else:
+        return str
