@@ -2,7 +2,7 @@
 def uppercase(str):
     len_str = len(str)
     i = 0
-    while i < len
+    while i < len:
         int_str = int(ord(str[i]))
         if (int_str > 96 and int_str < 123):
                       print("{}".format(char(int_str-32)))
