@@ -10,6 +10,6 @@ def remove_char_at(str, n):
         i = i + 1
         j = j + 1
     if n >= 0 and n < str_len:
-        return join(str2)
+        return "".join(str2)
     else:
         return str
