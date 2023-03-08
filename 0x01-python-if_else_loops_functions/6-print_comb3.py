@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-for decimal in range(0, 100):
-    if decimal == 99:
-        print("{}".format(decimal))
-    else:
-        print("{:02}".format(decimal), end=", ")
+for decimal in range(0, 10):
+    for last_digit in range(0, 10):
+        if(last_digit > decimal):
+             print("{}".format(decimal))
+             print("{}, ".format(decimal))
