@@ -5,4 +5,4 @@ for decimal in range(0, 10):
             print("{}".format(decimal),end="")
             print("{}".format(last_digit),end="")
             if( decimal != 8 and last_digit != 9):
-                print(", ")
+                print(", ",end="")
