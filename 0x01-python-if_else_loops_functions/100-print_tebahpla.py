@@ -5,3 +5,4 @@ while i > 64:
     if i % 2 != 0:
         upper = 32
     print("{}".format(chr(i - upper)), end="")
+    i = i - 1
