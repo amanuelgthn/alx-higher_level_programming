@@ -4,7 +4,7 @@ def pow(a, b):
     if b < 0:
         b = -b
         a = 1 / a
-    if b % 2 = 0:
+    if b % 2 == 0:
         a = abs(a)
     while i < b:
         a = a * a
