@@ -1,2 +1,4 @@
 #!/bin/bash
-python -m compileall main.py main.pyc
+python3 -c "import py_compile
+output = \"$PYFILE\" + \"c\"
+py_compile.compile(\"$PYFILE\", output)"
