@@ -13,9 +13,9 @@ if __name__ == "__main__":
             print("{} + {} = {}".format(a, b, calc.add(a, b)))
         elif sys.argv[2] == '-':
             print("{} - {} = {}".format(a, b, calc.sub(a, b)))
-        elif sys.argv[2] == '/':
-            print("{} * {} = {}".format(a, b, calc.mul(a, b)))
         elif sys.argv[2] == '*':
+            print("{} * {} = {}".format(a, b, calc.mul(a, b)))
+        elif sys.argv[2] == '/':
             print("{} / {} = {}".format(a, b, calc.div(a, b)))
         else:
             print("Unknown operator. Available operators: +, -, * and /")
