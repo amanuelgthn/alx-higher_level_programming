@@ -1,4 +1,5 @@
 #!/usr/bin/python3
-from variable_load_5 import a 
-b = a
-print(b)
+if __name__ == "__main__":
+  from variable_load_5 import a 
+  b = a
+  print(b)
