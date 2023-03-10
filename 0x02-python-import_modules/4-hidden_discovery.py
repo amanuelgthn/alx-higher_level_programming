@@ -7,7 +7,7 @@ if __name__ == "__main__":
     len_list = len(list)
     for i in range(0, len_list):
         str = list[i]
-        if (str[0] != "__"):
+        if (str[0] != "_"):
             list_data.append(list[i])
             print(list_data[j])
             j= j + 1
