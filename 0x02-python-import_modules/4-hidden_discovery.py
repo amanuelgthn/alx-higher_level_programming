@@ -10,4 +10,4 @@ if __name__ == "__main__":
     list_data.sort()
     n = len(list_data)
     for i in range(0, n):
-        print("{}.format(list_data[i])
+        print("{}.format(list_data[i]))
