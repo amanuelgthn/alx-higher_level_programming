@@ -3,11 +3,11 @@ if __name__ == "__main__":
     import hidden_4
     list = dir(hidden_4)
     list_data = []
+    j = 0
     len_list = len(list)
     for i in range(0, len_list):
-        if ((list[i])[0] != "__"):
+        str = list[i]
+        if ((str[0] != "__"):
             list_data.append(list[i])
-    list_data.sort()
-    n = len(list_data)
-    for i in range(0, n):
-        print("{}.format(list_data[i]))
+            print(list_data[j])
+            j= j + 1
