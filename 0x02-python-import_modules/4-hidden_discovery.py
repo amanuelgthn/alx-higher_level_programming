@@ -10,4 +10,4 @@ if __name__ == "__main__":
         if (str[0] != "_"):
             list_data.append(list[i])
             print(list_data[j])
-            j= j + 1
+            j = j + 1
