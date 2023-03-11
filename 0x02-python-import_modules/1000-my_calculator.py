@@ -21,4 +21,4 @@ if __name__ == "__main__":
         else:
             print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
-dis.dis(1000-my_calaculator.py)
+dis.dis(calc)
