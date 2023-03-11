@@ -2,6 +2,7 @@
 if __name__ == "__main__":
     import calculator_1 as calc
     import sys
+    import dis
     n = len(sys.argv)
     if n != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
@@ -20,3 +21,4 @@ if __name__ == "__main__":
         else:
             print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
+dis.dis(1000-my_calaculator.py)
