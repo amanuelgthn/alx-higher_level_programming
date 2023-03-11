@@ -1,3 +1,5 @@
 #!/bin/bash
 echo "Compiling main.py ..."
-python3 -m pycompile PYFILE
+python3 -c "from py_compile import compile"
+compilefile = \"$PYFILE\" + \"c\"
+compile(\"$PYFILE\", compilefile)"
