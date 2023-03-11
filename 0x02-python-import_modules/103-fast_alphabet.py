@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-print("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+import sys
+sys.stderr.write("ABCDEFGHIJKLMNOPQRSTUVWXYZ\n")
