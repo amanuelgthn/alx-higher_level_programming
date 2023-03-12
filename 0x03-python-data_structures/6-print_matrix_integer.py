@@ -3,9 +3,9 @@ def print_matrix_integer(matrix=[[]]):
     matrix_len = len(matrix)
     if matrix:
         for i in matrix:
-            for j in i:
-                print("{:d}".format(j), end="")
-                if i.next():
-                    print(end=" ")
-                    
+            k = len(i)
+            for j in (0, k):
+                print("{:d}".format(i[j]), end="")
+                if j != k -1
+                    print(end=" ")      
             print()
