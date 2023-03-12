@@ -6,6 +6,6 @@ def print_matrix_integer(matrix=[[]]):
             k = len(i)
             for j in (0, k):
                 print("{:d}".format(i[j]), end="")
-                if j != k -1
+                if j != k - 1:
                     print(end=" ")      
             print()
