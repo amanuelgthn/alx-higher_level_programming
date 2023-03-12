@@ -5,6 +5,6 @@ def print_matrix_integer(matrix=[[]]):
         for i in matrix:
             for j in (0, 3):
                 print("{:d}".format(i[j]), end="")
-                if j != k - 1:
+                if j != 2:
                     print(end=" ")      
             print()
