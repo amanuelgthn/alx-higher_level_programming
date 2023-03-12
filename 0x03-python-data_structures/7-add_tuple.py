@@ -16,7 +16,6 @@ def add_tuple(tuple_a=(), tuple_b=()):
         num4 = tuple_b[1]
     else:
         num4 = 0
-    
     c = num1 + num3
     d = num2 + num4
     tuple_add = (c, d)
