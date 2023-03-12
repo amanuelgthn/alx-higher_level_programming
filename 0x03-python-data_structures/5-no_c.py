@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 def no_c(my_string):
-    str_len = len(my_string)
-    new_str = ""
-    for i in (0, str_len-1):
-        if my_string[i] != 'c' or my_string[i] != 'C':
-            continue
-        new_str = new_str + my_string[i]
+    str_list = my_string.split()
+    str_len = len(str_list)
+    new_str = []
+    for i in (0, str_len):
+        if str_list[i] != 'c' or str_list[i] != 'C':
+            new_str = append.(my_string[i])
     return new_str
