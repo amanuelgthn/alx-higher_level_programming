@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
     if matrix:
+        l = 0
         for i in matrix:
             k = 0
             if i:
