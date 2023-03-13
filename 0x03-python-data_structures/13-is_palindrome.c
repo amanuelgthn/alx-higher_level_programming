@@ -57,7 +57,7 @@ int check_palindrome(int arr[], int start, int end)
 	}
 	if (arr[start] == arr[end])
 	{
-		return palindrome(arr, start + 1, end - 1);
+		return check_palindrome(arr, start + 1, end - 1);
 	}
 	else
 	{
