@@ -29,7 +29,7 @@ int *array(const listint_t *h)
 	unsigned int n;
 	size_t len;
 	
-	len = num_nodes(h):
+	len = num_nodes(h);
 	current = h;
 	n = 0;
 	array = malloc(sizeof(int)*(len + 1));
