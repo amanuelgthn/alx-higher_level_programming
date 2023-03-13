@@ -1,4 +1,4 @@
-#include"main.h"
+#include"lists.h"
 /**
  * num_nodes - function to return number of nodes in a linked list
  * @h: pointer to head of list
