@@ -48,6 +48,7 @@ int *array(const listint_t *h)
 *@start-left index
 *@end-right index
 *Return:1 if array is palindrome or 0 if not
+**/
 int check_palindrome(int arr[], int start, int end)
 {
 	if (start >= end)
@@ -70,5 +71,10 @@ int check_palindrome(int arr[], int start, int end)
 **/
 int is_palindrome(listint_t **head)
 {
-	
-	
+	int check, length;
+	int *new_array = array(*head);
+
+	length = sizeof(new_array) / sizeof(int);
+	check = check_palindrome(new_array, 0, length - 1);
+	return (check);
+}
