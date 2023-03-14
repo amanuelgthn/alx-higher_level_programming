@@ -32,7 +32,7 @@ int *array(const listint_t *h)
 	len = num_nodes(h);
 	current = h;
 	n = 0;
-	array = malloc(sizeof(int)*(len + 1));
+	array = malloc(sizeof(int) * len + 1);
 	while (current != NULL)
 	{
 		array[n] = current->n;
