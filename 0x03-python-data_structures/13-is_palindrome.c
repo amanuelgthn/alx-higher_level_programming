@@ -4,7 +4,7 @@
  * @h: pointer to head of list
  * Return: number of nodes
  */
-size_t num_nodes(const listint_t *h)
+int num_nodes(const listint_t *h)
 {
 	const listint_t *current;
 	unsigned int n;
@@ -27,7 +27,7 @@ int *array(const listint_t *h)
 {
 	const listint_t *current;
 	unsigned int n;
-	size_t len;
+	int len;
 	
 	len = num_nodes(h);
 	current = h;
