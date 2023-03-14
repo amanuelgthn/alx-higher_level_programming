@@ -35,10 +35,10 @@ listint_t *insert_node(listint_t **head, int number)
 		}
 		while (j < i)
 		{
-			current = current->next;
+			headcurrent = headcurrent->next;
 		}
-		new->next = current->next;
-		current->next= new;
+		new->next = headcurrent->next;
+		headcurrent->next= new;
 		
 	}
 	
