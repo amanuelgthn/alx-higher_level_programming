@@ -27,12 +27,12 @@ int *array(const listint_t *h)
 {
 	const listint_t *current;
 	unsigned int n;
-	int len;
+	int len, *new_array;
 	
 	len = num_nodes(h);
 	current = h;
 	n = 0;
-	array = malloc(sizeof(int) * len + 1);
+	new_array = (int*)malloc(sizeof(int) * len + 1);
 	while (current != NULL)
 	{
 		array[n] = current->n;
