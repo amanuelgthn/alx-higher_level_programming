@@ -35,12 +35,12 @@ int *array(const listint_t *h)
 	new_array = (int*)malloc(sizeof(int) * len + 1);
 	while (current != NULL)
 	{
-		array[n] = current->n;
+		new_array[n] = current->n;
 		current = current->next;
 		n++;
 	}
 
-    return (array);
+    return (new_array);
 }
 /**
 *check_palindrome-function to check if an array is palindrome
