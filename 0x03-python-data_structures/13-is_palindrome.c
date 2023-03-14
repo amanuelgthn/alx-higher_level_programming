@@ -74,7 +74,7 @@ int is_palindrome(listint_t **head)
 	int check, length;
 	int *new_array = array(*head);
 
-	length = sizeof(new_array) / sizeof(int);
+	length = num_nodes(*head);
 	check = check_palindrome(new_array, 0, length - 1);
 	return (check);
 }
