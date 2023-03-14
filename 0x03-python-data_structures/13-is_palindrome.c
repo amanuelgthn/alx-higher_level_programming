@@ -19,34 +19,33 @@ int num_nodes(const listint_t *h)
 	return (n);
 }
 /**
- * num_nodes - function to return number of nodes in a linked list
+ * array - function to convert a singly linked list to an array
  * @h: pointer to head of list
- * Return: number of nodes
+ * Return: converted array
  */
 int *array(const listint_t *h)
 {
 	const listint_t *current;
 	unsigned int n;
 	int len, *new_array;
-	
+
 	len = num_nodes(h);
 	current = h;
 	n = 0;
-	new_array = (int*)malloc(sizeof(int) * len + 1);
+	new_array = (int *)malloc(sizeof(int) * len + 1);
 	while (current != NULL)
 	{
 		new_array[n] = current->n;
 		current = current->next;
 		n++;
 	}
-
-    return (new_array);
+	return (new_array);
 }
 /**
 *check_palindrome-function to check if an array is palindrome
 *@arr:array to be checked
-*@start-left index
-*@end-right index
+*@start:left index
+*@end:right index
 *Return:1 if array is palindrome or 0 if not
 **/
 int check_palindrome(int arr[], int start, int end)
@@ -57,7 +56,7 @@ int check_palindrome(int arr[], int start, int end)
 	}
 	if (arr[start] == arr[end])
 	{
-		return check_palindrome(arr, start + 1, end - 1);
+		return (check_palindrome(arr, start + 1, end - 1));
 	}
 	else
 	{
