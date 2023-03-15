@@ -8,3 +8,4 @@ def only_diff_elements(set_1, set_2):
     list = []
     for element in x:
         list.append(element)
+    return list
