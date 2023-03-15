@@ -6,6 +6,8 @@ def common_elements(set_1, set_2):
             if val == element:
                 list.append(val)
     return list
+
+
 def only_diff_elements(set_1, set_2):
     list = common_elements(set_1, set_2)
     x = set()
