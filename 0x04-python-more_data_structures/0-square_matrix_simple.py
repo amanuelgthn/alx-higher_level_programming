@@ -9,8 +9,10 @@ Initial matrix should not be modified
 You are not allowed to import any module
 You are allowed to use regular loops, map, etc.
 def square_matrix_simple(matrix=[]):
-    arr_len = len(matrix)
-    list_len = len(matrix[0])
+    k =0
+    list=[[]]
     for i in matrix:
         for j in i:
-            list
+            list[k].append(j*j)
+        k = k + 1
+    return list
