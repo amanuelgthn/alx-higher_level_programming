@@ -11,5 +11,6 @@ You are allowed to use regular loops, map, etc.
 def square_matrix_simple(matrix=[]):
     arr_len = len(matrix)
     list_len = len(matrix[0])
-    
-   
+    for i in matrix:
+        for j in i:
+            list
