@@ -3,12 +3,11 @@ def best_score(a_dictionary):
     x = 0
     y = 0
     Name = None
-    if len(a_dictionary) != 0:
+    if len(a_dictionary) != 0 and a_dictionary != None:
         for keys in a_dictionary.keys():
             y = [keys]
             if x < y:
                 x = y
                 Name = keys
-    if a_dictionary != None:
-        return Name
-    return None
+    return Name
+    
