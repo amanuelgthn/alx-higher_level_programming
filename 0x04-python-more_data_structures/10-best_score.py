@@ -4,7 +4,7 @@ def best_score(a_dictionary):
     y = 0
     Name = None
     if a_dictionary:
-        if len (a_dictionary) != 0:
+        if len(a_dictionary) != 0:
             for keys in a_dictionary.keys():
                 y = a_dictionary[keys]
                 if x < y:
