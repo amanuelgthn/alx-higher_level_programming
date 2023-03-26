@@ -11,7 +11,7 @@ def roman_to_int(roman_string):
     sum = 0 
     for num in list:
         if num in dict:
-            sum = sum + dict[num]
+           print(dict[num])
         else:
             return 0
     return sum
