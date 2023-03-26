@@ -11,12 +11,14 @@ def roman_to_int(roman_string):
     length = len(roman_string)
     if(str(roman_string)):
         for i in range(1,length):
+            str1 = roman_string[i-1]
+            str2 = roman_string[i]
             if roman_string[i] in dict:
-                if dict[roman_string[i-1]] > dict[roman_string[i]]:
-                    sum = sum + dict[roman_string[i-1]]
-                    print(dict[roman_string[i-1]])
+                if dict[str1] > dict[str2]:
+                    sum = sum + dict[str1]
+                    print(dict[str1])
                 else:
-                     sum = sum - dict[roman_string[i-1]]
+                     sum = sum - dict[str1]
             else:
                 return 0
         return sum
