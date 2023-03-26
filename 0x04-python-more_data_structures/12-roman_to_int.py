@@ -8,10 +8,10 @@ def roman_to_int(roman_string):
             "D":500,
             "M":1000}
     sum = 0
-    if(str(roamn_string)):
+    if(str(roman_string)):
         for num in roman_string:
             if num in dict:
-                print(dict[num])
+                sum = sum + dict[num])
             else:
                 return 0
         return sum
