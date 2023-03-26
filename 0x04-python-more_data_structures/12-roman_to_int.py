@@ -14,6 +14,7 @@ def roman_to_int(roman_string):
             if roman_string[i] in dict:
                 if dict[roman_string[i-1]] > dict[roman_string[i]]:
                     sum = sum + dict[roman_string[i-1]]
+                    print(dict[roman_string[i-1]])
                 else:
                      sum = sum - dict[roman_string[i-1]]
             else:
