@@ -7,9 +7,8 @@ def roman_to_int(roman_string):
             "C":100,
             "D":500,
             "M":1000}
-    list = roman_string.split()
     sum = 0 
-    for num in list:
+    for num in roman_string:
         if num in dict:
            print(dict[num])
         else:
