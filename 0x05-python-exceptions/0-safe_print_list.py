@@ -1,6 +1,6 @@
 def safe_print_list(my_list=[], x=0):
     num_print = 0
-    for i in mylist:
+    for i in my_list:
         try:
             while num_print < x:
                 print(i)
