@@ -15,6 +15,6 @@ def list_division(my_list_1, my_list_2, list_length):
             result = 0
             print("division by 0")
         finally:
-            new_list += [result]
+            new_list.append(result)
         index += 1
     return new_list
