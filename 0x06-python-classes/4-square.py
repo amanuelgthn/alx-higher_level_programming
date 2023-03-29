@@ -18,5 +18,5 @@ class Square:
     def size(self):
         return self.__size
     def size(self, value):
-        seelf.__size = value
+        self.__size = value
   
