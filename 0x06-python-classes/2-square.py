@@ -8,7 +8,7 @@ class Square:
         try:
             if isinstance(size) == True and size > 0:
                 num = int(size)
-            else size < 0:
+            if size < 0:
                  raise Exception("size must be >= 0")
         except TypeError:
             print("size must be an integer")
