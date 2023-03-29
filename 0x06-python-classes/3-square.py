@@ -13,5 +13,5 @@ class Square:
             self.__size = size
     def area(self):
         """Public instance method to return area of square"""
-        return size * size
+        return self.__size * self.__size
     
