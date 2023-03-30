@@ -4,8 +4,10 @@
 
 class Square:
     """Class Square with private instancef size"""
-    def __init__(self, size=0):
+    def __init__(self, size=0,position=(0, 0)):
         self.__size = size
+        self.__position = position
+
 
     @property
     def size(self):
@@ -19,6 +21,23 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
+    @property
+    def position(self):
+        return self._position
+    
+    @position.setter
+    def position(self, value):
+        if type(value) != tuple or len(value) != 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif (type(value[0]) != int or value[0] < 0 or type(value[1]) != int or value[1] < 0):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.__position = value
+
+
+
+
+
 
     def area(self):
         """Public instance method to return area of square"""
@@ -29,6 +48,6 @@ class Square:
             print()
         else:
             for i in range(0, self.size):
-                for j in range(0, self.__size):
+                for j in range(0, self.size):
                     print("#", end="")
                 print()
