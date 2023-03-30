@@ -5,8 +5,8 @@
 class Square:
     """Class Square with private instancef size"""
     def __init__(self, size=0, position=(0, 0)):
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -27,11 +27,11 @@ class Square:
 
     @position.setter
     def position(self, value):
-        if type(value) != tuple or len(value) != 2:
+        if type(value) != tuple:
             raise TypeError("position must be a tuple of 2 positive integers")
-        elif type(value[0]) != int or value[0] < 0:
+        elif len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        elif type(value[1]) != int or value[1] < 0:
+        if any(type(i) != int for i in value) or any(j < 0 for j in value):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
