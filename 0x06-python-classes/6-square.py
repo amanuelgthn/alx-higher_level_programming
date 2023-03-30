@@ -33,12 +33,7 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
-
-
-
-
-
-
+    
     def area(self):
         """Public instance method to return area of square"""
         return self.size**2
