@@ -6,9 +6,11 @@ class Square:
     """Class Square with private instancef size"""
     def __init__(self, size=0):
         self.__size = size
+
     @property
     def size(self):
         return self.__size
+
     @size.setter
     def size(self, value):
         if type(value) != int:
@@ -18,6 +20,7 @@ class Square:
         else:
             self.__size = value
         self.__size = value
+
     def area(self):
         """Public instance method to return area of square"""
         return self.__size**2
