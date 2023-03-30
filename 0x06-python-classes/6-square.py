@@ -23,7 +23,7 @@ class Square:
             self.__size = value
     @property
     def position(self):
-        return self._position
+        return self.__position
     
     @position.setter
     def position(self, value):
@@ -42,7 +42,12 @@ class Square:
         if self.size == 0:
             print()
         else:
-            for i in range(0, self.size):
-                for j in range(0, self.size):
-                    print("#", end="")
+            for y in range(0,self.position[1]):
                 print()
+            for i in range(0, self.size):
+                    for j in range(0, self.size+self.position[0]):
+                        if j < self.position[0]:
+                            print(" ", end="")
+                        else:
+                            print("#", end="")
+                    print()
