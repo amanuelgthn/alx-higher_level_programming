@@ -19,11 +19,9 @@ class Square:
             raise ValueError("size must be >= 0")
         else:
             self.__size = value
-        self.__size = value
 
-    def area(self):
-        """Public instance method to return area of square"""
-        return self.__size**2
-    
     def my_print(self):
-        for i in 
+        for i in (0, self.size):
+            for j in (0, self.size):
+                print("#",end="")
+            print()
