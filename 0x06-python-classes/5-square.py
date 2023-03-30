@@ -20,10 +20,15 @@ class Square:
         else:
             self.__size = value
 
+    def area(self):
+        """Public instance method to return area of square"""
+        return self.size**2
+
     def my_print(self):
         if self.size == 0:
-            
-        for i in range(0, self.size):
-            for j in range(0, self.__size):
-                print("#",end="")
             print()
+        else:
+            for i in range(0, self.size):
+                for j in range(0, self.__size):
+                    print("#",end="")
+                print()
