@@ -57,7 +57,7 @@ class SinglyLinkedList:
             self.head = NewNode
             return
         insert_node = self.head
-        while insert_node.next_node and insert_node.data > NewNode.data:
+        while insert_node.next_node and insert_node.data < NewNode.data:
             insert_node = insert_node.next_node
         if insert_node.next_node:
             NewNode.next_node = insert_node.next_node
