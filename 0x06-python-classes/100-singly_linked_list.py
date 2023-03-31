@@ -5,8 +5,8 @@
 class Node:
     """Class that defines a node of a singly linked list"""
     def __init__(self, data, next_node=None):
-        self.data = data
-        self.next_node = next_node
+        self.__data = data
+        self.__next_node = next_node
 
     @property
     def data(self):
