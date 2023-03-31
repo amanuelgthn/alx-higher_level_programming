@@ -40,17 +40,21 @@ class Square:
         """Public instance method to return area of square"""
         return self.size**2
 
-    def my_print(self):
+    def __str__(self):
+        result = ""
         if self.size == 0:
-            print()
+            return "\n"
         else:
             for y in range(0, self.position[1]):
-                print()
+                result += "\n"
             for i in range(0, self.size):
                 for j in range(0, self.size+self.position[0]):
                     if j < self.position[0]:
-                        print(" ", end="")
+                        result += " "
                     else:
-                        print("#", end="")
-                print()
-    
+                        result += "#"
+                result += "\n"
+            return result[:-1]
+
+    def my_print(self):
+        print(self.list_print(), end="")
