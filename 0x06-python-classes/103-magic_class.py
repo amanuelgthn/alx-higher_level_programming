@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import math
-"""MagicClass to calculate area and circumfurence of a circle"""
+"""math module to import pi"""
 
 
 class MagicClass:
