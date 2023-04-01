@@ -4,8 +4,7 @@ import math
 
 
 class MagicClass:
-    """MagicClass"""
-
+    """MagicClass to calculate area and circumfurence of a circle"""
     def __init__(self, radius):
         self._MagicClass__radius = 0
         if type(radius) is not int and type(radius) is not float:
