@@ -1,6 +1,14 @@
 #!/usr/bin/python3
+"""
+Module to add two integers or floats
+floats are casted to integers
+raise TypeError if type is other than int or floats
+"""
+
+
 def add_integer(a, b=98):
-    """Function to return the addition of two integer
+    """
+    Function to add two integers or floats
     """
     if type(a) not in [int, float]:
         raise TypeError("a must be an integer")
