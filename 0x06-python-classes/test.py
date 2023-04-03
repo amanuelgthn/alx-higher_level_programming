@@ -1,70 +1,62 @@
 #!/usr/bin/python3
-import dis
-class Node:
-    def __init__(self, data, next_node=None):
-        """Defines a node of a singly linked list"""
-        self.data = data
-        self.next_node = next_node
-
-    @property
-    def data(self):
-        """data getter"""
-        return self.__data
-
-    @data.setter
-    def data(self, value):
-        """data setter"""
-        if type(value) != int:
-            raise TypeError("data must be an integer")
-        self.__data = value
-
-    @property
-    def next_node(self):
-        """next_node getter"""
-        return self.__next_node
-
-    @next_node.setter
-    def next_node(self, value):
-        """next_node setter"""
-        if value is not None and type(value) is not Node:
-            raise TypeError("next_node must be a Node object")
-        self.__next_node = value
+"""
+    Insert here module comment
+    Write a function that divides all elements of a matrix.
+    Prototype: def matrix_divided(matrix, div):
+    matrix must be a list of lists of integers or floats,
+    otherwise raise a TypeError exception with the message
+    matrix must be a matrix (list of lists)
+    of integers/floats
+    Each row of the matrix must be of the same size,
+    otherwise raise a TypeError exception
+    with the message Each row of the matrix must have
+    the same size
+    div must be a number (integer or float),
+    otherwise raise a TypeError exception
+    with the message div must be a number
+    div can’t be equal to 0, otherwise raise a
+    ZeroDivisionError exception
+    with the message division by zero
+    All elements of the matrix should be divided by div,
+    rounded to 2 decimal places
+    Returns a new matrix
+    You are not allowed to import any module
+"""
 
 
-class SinglyLinkedList:
-    def __init__(self):
-        """Defines a singly linked list"""
-        self.__head = None
-
-    def sorted_insert(self, value):
-        new = Node(value)
-        tmp = self.__head
-        add_start = False
-
-        if not self.__head:
-            self.__head = new
-            new.next_node = None
-        else:
-            if value < self.__head.data:
-                add_start = True
-            while tmp.next_node and value > tmp.next_node.data\
-                    and not add_start:
-                tmp = tmp.next_node
-            if not add_start:
-                    new.next_node = tmp.next_node
-                    tmp.next_node = new
-            else:
-                new.next_node = tmp
-                self.__head = new
-            new.data = value
-
-    def __str__(self):
-        s = ""
-        current = self.__head
-
-        while current:
-            s += str(current.data) + '\n'
-            current = current.next_node
-        return s[: -1]
-dis.dis(Node)
-dis.dis(data)
+def matrix_divided(matrix, div):
+    """ Divide a matrix by a number div """
+    list_error = "matrix must be a matrix (list of lists) of integers/floats"
+    len_error = "Each row of the matrix must have the same size"
+    div_int_error = "div must be a number"
+    div_zero_error = "division by zero"
+    new_matrix = []
+    new_list = []
+    if not matrix:
+        raise TypeError(list_error)
+    if type(div) is not int and type(div) is not float:
+        raise TypeError(div_int_error)
+    if div == 0:
+        raise ZeroDivisionError(div_zero_error)
+    longitud = len(matrix[0])
+    for lista in matrix:
+        if type(lista) is not list:
+            raise TypeError(list_error)
+        if len(lista) != longitud:
+            raise TypeError(len_error)
+        for item in lista:
+            if type(item) is not int and type(item) is not float:
+                raise TypeError(list_error)
+            num = item / div
+            new_list.append(round(num, 2))
+        new_matrix.append(new_list)
+        new_list = []
+    return new_matrix
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6]
+]
+empty = [[]]
+print(matrix_divided(matrix,9))
+print(matrix)
+print(matrix_divided(empty, 3))
