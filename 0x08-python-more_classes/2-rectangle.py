@@ -54,7 +54,13 @@ class Rectangle:
         self.__height = value
 
     def area(self):
+        """
+        Public instance method that returns the rectangle area
+        """
         return self.height * self.width
 
     def perimeter(self):
+        """
+        Public instance method that returns the rectangle perimeter
+        """
         return 2*(self.height + self.width)
