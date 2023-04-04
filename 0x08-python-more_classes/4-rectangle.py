@@ -77,5 +77,6 @@ class Rectangle:
                     result += "#"
                 result += "\n"
             return result[:-1]
+
     def __repr__(self):
         return "Rectangle({:d}, {:d})".format(self.width, self.height)
