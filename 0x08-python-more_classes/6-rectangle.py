@@ -9,13 +9,13 @@ class Rectangle:
     """
     class Rectangle that defines a width and height
     """
-    count = 0
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """
         Instantiation with optional width and height of a rectangle
         """
-        Rectangle.count +=1
+        Rectangle.number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -84,8 +84,5 @@ class Rectangle:
         return "Rectangle({:d}, {:d})".format(self.width, self.height)
 
     def __del__(self):
-        Rectangle.count -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
-        
-    def number_of_instances(self):
-        return Rectangle.count
