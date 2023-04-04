@@ -80,3 +80,6 @@ class Rectangle:
 
     def __repr__(self):
         return "Rectangle({:d}, {:d})".format(self.width, self.height)
+
+    def __del__(self):
+        print("Bye rectangle...")
