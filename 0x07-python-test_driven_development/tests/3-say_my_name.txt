@@ -20,3 +20,8 @@ TypeError: first_name must be a string
 Traceback (most recent call last):
 ...
 TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+>>> say_my_name("Aman", 13)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string

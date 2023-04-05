@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This is the '3-say_my_name' module containing a function that 
+This is the '3-say_my_name' module containing a function that
 prints My name is <first name> <last name>
 """
 
