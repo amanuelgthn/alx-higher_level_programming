@@ -1,14 +1,14 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """
-Module containing a function that prints
-My name is <first name> <last name>
+This is the '3-say_my_name' module containing a function that 
+prints My name is <first name> <last name>
 """
 
 
 def say_my_name(first_name, last_name=""):
     """
-    Function to print 
-    My name is <first_name> <last_name>
+    Function to print  'My name is' if followed by
+    <first_name> <last_name>
     """
     if type(first_name) != str:
         raise TypeError("first_name must be a string")
