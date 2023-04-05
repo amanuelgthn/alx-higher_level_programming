@@ -1,5 +1,15 @@
 #!usr/bin/python3
+"""
+Module containing a function that prints
+My name is <first name> <last name>
+"""
+
+
 def say_my_name(first_name, last_name=""):
+    """
+    Function to print 
+    My name is <first_name> <last_name>
+    """
     if type(first_name) != str:
         raise TypeError("first_name must be a string")
     if type(last_name) != str:
