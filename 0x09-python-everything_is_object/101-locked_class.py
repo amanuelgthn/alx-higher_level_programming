@@ -2,7 +2,8 @@
 """
 Module containing LockedClass class to preventing the user
 from dynamically creating new instance attributes except for
-first_name"""
+first_name
+"""
 
 
 class LockedClass:
