@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-def magic_string():
-  increament += 1
-  return increament*"Best School"
+def magic_string(best_school=[]):
+  best_school += ['BestSchool']
+  return ", ".join(best_school)
