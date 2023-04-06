@@ -6,10 +6,17 @@ for N greater than or equal to 4
 
 
 import sys
-
-if __name__ === "__main__":
+"""
+Solution for the N queens problem
+"""
+if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("101-nqueens.py")
         sys.exit(1)
-    print(type(sys.argv))
-      
+    try:
+        n = int(sys.argv[1])
+    except Exception:
+        print("N must be a number")
+        sys.exit(1)
+    if n < 4:
+        print("N must be at least 4")
