@@ -22,6 +22,6 @@ True
 >>> my_list.print_sorted()
 [-3, 0, 0, 2, 3, 4, 5, 12]
 >>> my_list.append(NULL)
-Traceback (most recent call last);
+Traceback (most recent call last):
 ...
 NameError: name 'NULL' is not defined
