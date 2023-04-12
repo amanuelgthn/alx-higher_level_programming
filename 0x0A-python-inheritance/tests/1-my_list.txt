@@ -31,3 +31,9 @@ NameError: name 'NULL' is not defined
 >>> my_list.append(10)
 >>> my_list.print_sorted()
 [10, 10000, 10000000000000000000000000000000000000000]
+>>> my_list.clear()
+>>> my_list.append(10)
+>>> my_list.append(10)
+>>> my_list.append(10)
+>>> my_list.print_sorted()
+[10, 10, 10]
