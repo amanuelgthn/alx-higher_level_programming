@@ -25,6 +25,7 @@ True
 Traceback (most recent call last):
 ...
 NameError: name 'NULL' is not defined
+>>> my_list.clear()
 >>> my_list.append(None)
 Traceback (most recent call last):
 ...
