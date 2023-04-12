@@ -25,3 +25,7 @@ True
 Traceback (most recent call last):
 ...
 NameError: name 'NULL' is not defined
+>>> my_list.append(None)
+Traceback (most recent call last):
+...
+TypeError: unorderable types: NoneType() < int()
