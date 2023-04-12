@@ -1,11 +1,9 @@
 #!/usr/bin/python3
 """
-import json module
-import sys
+import sys Module
 """
 
 
-import json
 import sys
 """
 module containing a script that adds
