@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Import module json
+"""
+
+
 import json
 """
 Module containing function to_json_string function
