@@ -26,7 +26,8 @@ Traceback (most recent call last):
 ...
 NameError: name 'NULL' is not defined
 >>> my_list.clear()
->>> my_list.append(None)
-Traceback (most recent call last):
-...
-TypeError: unorderable types: NoneType() < int()
+>>> my_list.append(10000000000000000000000000000000000000000)
+>>> my_list.append(10000)
+>>> my_list.append(10)
+>>> my_list.print_sorted()
+[10, 10000, 10000000000000000000000000000000000000000]
