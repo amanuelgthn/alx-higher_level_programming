@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module  class Student
+Module class Student
 """
 
 
@@ -19,9 +19,9 @@ Module  class Student
             self.age = age
 
         def to_json(self):
-          """
-          function that returns the dictionary description
-          with simple data structure
-          """
+            """
+            function that returns the dictionary description
+            with simple data structure
+            """
             return vars(self)
       
