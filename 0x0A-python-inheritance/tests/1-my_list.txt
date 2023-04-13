@@ -1,0 +1,39 @@
+>>> MyList = __import__('1-my_list').MyList
+
+>>> my_list = MyList()
+>>> print(my_list)
+[]
+>>> my_list.print_sorted()
+[]
+>>> isinstance(my_list, list)
+True
+>>> my_list.append(4)
+>>> my_list.append(12)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> my_list.append(2)
+>>> print(my_list)
+[4, 12, 3, 5, 2]
+>>> my_list.print_sorted()
+[2, 3, 4, 5, 12]
+>>> my_list.append(0)
+>>> my_list.append(-3)
+>>> my_list.append(0)
+>>> my_list.print_sorted()
+[-3, 0, 0, 2, 3, 4, 5, 12]
+>>> my_list.append(NULL)
+Traceback (most recent call last):
+...
+NameError: name 'NULL' is not defined
+>>> my_list.clear()
+>>> my_list.append(10000000000000000000000000000000000000000)
+>>> my_list.append(10000)
+>>> my_list.append(10)
+>>> my_list.print_sorted()
+[10, 10000, 10000000000000000000000000000000000000000]
+>>> my_list.clear()
+>>> my_list.append(10)
+>>> my_list.append(10)
+>>> my_list.append(10)
+>>> my_list.print_sorted()
+[10, 10, 10]
