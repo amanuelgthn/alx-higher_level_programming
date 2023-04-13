@@ -22,5 +22,5 @@ list = []
 for i in range(1, n):
     list.append(sys.argv[i])
 filename = "add_item.json"
-save_to_json_file(list, filename)
 filename = load_from_json_file(filename)
+save_to_json_file(list, filename)
