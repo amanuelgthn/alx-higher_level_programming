@@ -16,6 +16,8 @@ True
 [4, 12, 3, 5, 2]
 >>> my_list.print_sorted()
 [2, 3, 4, 5, 12]
+>>> print(my_list)
+[4, 12, 3, 5, 2]
 >>> my_list.append(0)
 >>> my_list.append(-3)
 >>> my_list.append(0)
