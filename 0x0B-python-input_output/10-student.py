@@ -17,7 +17,7 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self, attrs=None): 
+    def to_json(self, attrs=None):
         """Public method that returns the dictionary description
         with simple data structure
         """
