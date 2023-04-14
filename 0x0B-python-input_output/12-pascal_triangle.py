@@ -1,5 +1,12 @@
 #!/usr/bin/python3
 """
+import sys module
+"""
+
+import sys
+
+
+"""
 Module containing Pascal's Triangle
 """
 
@@ -36,4 +43,5 @@ def pascal_triangle(n):
             value = combination(i-1, j)
             row.append(value)
         column.append(row)
+    sys.stderr.write("Anything")
     return column
