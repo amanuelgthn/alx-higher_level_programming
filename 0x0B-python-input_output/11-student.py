@@ -1,12 +1,5 @@
 #!/usr/bin/python3
 """
-import module JSON
-"""
-
-import json as js
-
-
-"""
 Module class Student
 """
 
