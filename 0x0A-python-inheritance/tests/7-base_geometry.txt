@@ -51,3 +51,11 @@ TypeError: num must be an integer
 Traceback (most recent call last):
 ...
 TypeError: num must be an integer
+>>> base.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+>>> base.integer_validator("num", "3")
+Traceback (most recent call last):
+...
+TypeError: num must be an integer
