@@ -17,3 +17,4 @@ except Exception as e:
     print("[{}] {}".format(e.__class__.__name__, e))
 
 bg.area()
+bg.integer_validator("num", "8")
