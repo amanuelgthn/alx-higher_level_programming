@@ -18,11 +18,11 @@ ValueError: num must be greater than 0
 >>> base.integer_validator("num")
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+TypeError: integer_validator() missing 1 required positional argument: 'value'
 >>> base.integer_validator()
 Traceback (most recent call last):
 ...
-TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 >>> base.integer_validator(NULL,4)
 Traceback (most recent call last):
 ...
