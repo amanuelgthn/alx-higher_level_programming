@@ -21,8 +21,7 @@ class MyInt(int):
 
     @int_num.setter
     def int_num(self, int_num):
-        if type(int_num) is int:
-            self.__int_num = int_num
+        self.__int_num = int_num
 
     def __eq__(self, other):
         if self.int_num == other:
