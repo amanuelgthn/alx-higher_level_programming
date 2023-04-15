@@ -27,11 +27,9 @@ class MyInt(int):
     def __eq__(self, other):
         if self.int_num == other:
             return False
-        else:
-            return True
+        return True
 
     def __ne__(self, other):
         if self.int_num != other:
             return False
-        else:
-            return True
+        return True
