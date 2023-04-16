@@ -34,8 +34,8 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         cls_name = ""
-        cls_name =str(cls.__name__)
-        if list_objs:
-            list_objs = Base.to_json_string(list_objs)
-        with open("cls_name.json",'w',encoding="utf-8") as file:
-            json.dump(list_objs, file)
+        cls_name = cls.__name__+ ".json"
+        #if list_objs:
+            #list_objs = Base.to_json_string(list_objs)
+        with open(cls_name,'w',encoding="utf-8") as file:
+            file.write(str(list_objs))
