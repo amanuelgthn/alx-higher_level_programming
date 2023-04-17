@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 """
 import json module
+import csv module
 """
 
 
 import json
+import csv
 """
 base.py
 """
@@ -26,6 +28,9 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """
+        method that returns the JSON string representation of list_dictionaries
+        """
         if list_dictionaries:
             return json.dumps(list_dictionaries)
         else:
@@ -33,9 +38,53 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        cls_name = ""
-        cls_name = cls.__name__+ ".json"
-        #if list_objs:
-            #list_objs = Base.to_json_string(list_objs)
-        with open(cls_name,'w',encoding="utf-8") as file:
-            file.write(str(list_objs))
+        """
+        method hat writes the JSON string representation of list_objs to a file
+        """
+        file_name = "{}.json".format(cls.__name__)
+        if list_objs:
+            list_objs = [objs.to_dictionary() for objs in list_objs]
+        else:
+            return []
+        with open(file_name, 'w', encoding="utf-8") as file:
+            file.write(Base.to_json_string(list_objs))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        method that returns an instance with all attributes already set
+        """
+        if json_string:
+            return json.loads(json_string)
+        else:
+            return []
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        method that returns an instance with all attributes already set
+        """
+        from models.rectangle import Rectangle
+        from models.square import Square
+        if cls == Rectangle:
+            instance = Rectangle(4, 6)
+        elif cls == Square:
+            instance = Square(4)
+        instance.update(**dictionary)
+        return instance
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        method that returns list of instances
+        """
+        from os import path
+        file_name = "{}.json".format(cls.__name__)
+        if not path.isfile(file_name):
+            return []
+        with open(file_name, "r", encoding="utf-8") as file:
+            json_string = file.read()
+            instances = []
+        instances = [cls.create(**d) for
+                     d in cls.from_json_string(json_string)]
+        return instances
