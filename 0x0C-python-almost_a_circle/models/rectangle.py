@@ -2,8 +2,6 @@
 """
 import module Base
 """
-
-
 from models.base import Base
 """
 Module containing Rectangle class
@@ -167,4 +165,3 @@ class Rectangle(Base):
         dict_attr['height'] = self.height
         dict_attr['width'] = self.width
         return dict_attr
-
