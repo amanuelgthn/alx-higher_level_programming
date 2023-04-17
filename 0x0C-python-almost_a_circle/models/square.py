@@ -16,14 +16,23 @@ class Square(Rectangle):
     """
 
     def __init__(self, size, x=0, y=0, id=None):
+        """
+        Initialization
+        """
         super().__init__(size, size, x, y)
 
     @property
     def size(self):
+        """
+        property for size
+        """
         return self.width
 
     @size.setter
     def size(self, value):
+        """
+        size setter
+        """
         self.width = value
         self.height = value
 
@@ -38,6 +47,8 @@ class Square(Rectangle):
         return result
 
     def __update(self, id=None, size=None, x=None, y=None):
+        """
+        __update method"""
         if id:
             self.id = id
         if size:
@@ -48,12 +59,18 @@ class Square(Rectangle):
             self.y = y
 
     def update(self, *args, **kwargs):
+        """
+        update method
+        """
         if args:
             self.__update(*args)
         elif kwargs:
             self.__update(**kwargs)
 
     def to_dictionary(self):
+        """
+        to_dictionary method
+        """
         dict_attr = {}
         dict_attr['x'] = self.x
         dict_attr['y'] = self.y
