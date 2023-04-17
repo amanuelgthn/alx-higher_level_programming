@@ -126,8 +126,11 @@ class Rectangle(Base):
         for k in range(0, self.y):
             print()
         for i in range(0, self.height):
-            for j in range(self.x, self.width + self.x):
-                print("#", end="")
+            for j in range(0, self.width + self.x):
+                if j < self.x:
+                    print(" ", end="")
+                else:
+                    print("#", end="")
             print()
 
     def __str__(self):
