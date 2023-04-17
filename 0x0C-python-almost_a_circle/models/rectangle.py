@@ -141,6 +141,9 @@ class Rectangle(Base):
         return result
 
     def __update(self, id=None, width=None, height=None, x=None, y=None):
+        """
+        __update method
+        """
         if id:
             self.id = id
         if width:
@@ -153,12 +156,18 @@ class Rectangle(Base):
             self.y = y
 
     def update(self, *args, **kwargs):
+        """
+        update method
+        """
         if args:
             self.__update(*args)
         elif kwargs:
             self.__update(**kwargs)
 
     def to_dictionary(self):
+        """
+        to dictionary method
+        """
         dict_attr = {}
         dict_attr['x'] = self.x
         dict_attr['y'] = self.y
