@@ -88,22 +88,6 @@ class Base:
         instances = [cls.create(**d) for
                      d in cls.from_json_string(json_string)]
         return instances
-    
-     @classmethod
-    def load_from_file(cls):
-        """
-        method that returns list of instances
-        """
-        from os import path
-        file_name = "{}.json".format(cls.__name__)
-        if not path.isfile(file_name):
-            return []
-        with open(file_name, "r", encoding="utf-8") as file:
-            json_string = file.read()
-            instances = []
-        instances = [cls.create(**d) for
-                     d in cls.from_json_string(json_string)]
-        return instances
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
