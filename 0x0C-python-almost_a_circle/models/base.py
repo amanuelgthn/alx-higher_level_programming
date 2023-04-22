@@ -99,8 +99,12 @@ class Base:
         file_name = "{}.csv".format(cls.__name__)
         with open(file_name, "w", encoding="utf-8") as file:
             file = csv.writer(file)
-            for obj in list_objs:
-                file.writerow([obj])
+            if cls.__name__ == "Rectangle":
+                for obj in list_objs:
+                    file.writerow([obj.id, obj.width, obj.height, obj.x, obj.y])
+            elif cls.__name__ == "Square":
+                for obj in list_objs:
+                    file.writerow([obj.id, obj.size, obj.x, obj.y])
 
     @classmethod
     def load_from_file_csv(cls):
@@ -112,9 +116,12 @@ class Base:
         file_name = "{}.csv".format(cls.__name__)
         with open(file_name, "r", encoding="utf-8") as file:
             obj = csv.reader(file)
-            dict = {}
-            ret = []
+            list_obj = []
             for row in obj:
-                if cls is Rectangle:
-                    dict = row
-        return dict
+                row = [int(i) for i in row]
+                if cls.__name__ == "Rectangle":
+                    obj = cls(row[1], row[2], row[3], row[4], row[0])
+                elif cls.__name__ == "Square":
+                    obj = cls(row[1], row[2], row[3], row[0])
+                list_obj.append(obj)
+            return list_obj
