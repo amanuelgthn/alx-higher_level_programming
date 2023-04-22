@@ -7,6 +7,7 @@ import csv module
 
 import json
 import csv
+import turtle
 """
 base.py
 """
@@ -103,7 +104,7 @@ class Base:
                 for obj in list_objs:
                     file.writerow([obj.id, obj.width,
                                    obj.height, obj.x, obj.y])
-            elif cls.__name__ == "Square":
+            else:
                 for obj in list_objs:
                     file.writerow([obj.id, obj.size, obj.x, obj.y])
 
@@ -122,7 +123,41 @@ class Base:
                 row = [int(i) for i in row]
                 if cls.__name__ == "Rectangle":
                     obj = cls(row[1], row[2], row[3], row[4], row[0])
-                elif cls.__name__ == "Square":
+                else:
                     obj = cls(row[1], row[2], row[3], row[0])
                 list_obj.append(obj)
             return list_obj
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """
+        method that opens a window and draws all the rectangle and square
+        """
+        turtle = turtle.Turtle()
+        turtle.color("white")
+        turtle,pensize(4)
+        turtle.setposition(0, 0)
+        for rectangle in list_rectangles:
+            turtle.color(rectangle.color)
+            turtle.begin_fill()
+            turtle.forward(rectangle.width)
+            turtle.right(90)
+            turtle.forward(rectangle.height)
+            turtle.right(90)
+            turtle.forward(rectangle.width)
+            turtle.right(90)
+            turtle.forward(rectangle.height)
+            turtle.end_fill()
+        for square in list_squares:
+            turtle.color(square.color)
+            turtle.begin_fill()
+            turtle.forward(square.side)
+            turtle.right(90)
+            turtle.forward(square.side)
+            turtle.right(90)
+            turtle.forward(square.side)
+            turtle.right(90)
+            turtle.forward(square.side)
+            turtle.end_fill()
+        turtle.hideturtle()
+        turtle.done()
