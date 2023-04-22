@@ -118,4 +118,3 @@ class Base:
                 if cls is Rectangle:
                     dict = row
         return dict
-
