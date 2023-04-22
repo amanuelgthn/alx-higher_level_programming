@@ -3,6 +3,7 @@
 Module to print a list in ascending order
 """
 
+
 class MyList(list):
     """
     class Mylist inheriting from builtin list
@@ -11,4 +12,3 @@ class MyList(list):
 
     def print_sorted(self):
         print(sorted(self))
-        

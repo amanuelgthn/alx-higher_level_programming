@@ -6,4 +6,56 @@
 >>> base.integer_validator("num", -3)
 Traceback (most recent call last):
 ...
-ValueError "num" must be greater than 0
+ValueError: num must be greater than 0
+>>> base.integer_validator("num", 3.3)
+Traceback (most recent call last):
+...
+TypeError: num must be an integer
+>>> base.integer_validator("num", 0)
+Traceback (most recent call last):
+...
+ValueError: num must be greater than 0
+>>> base.integer_validator("num")
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+>>> base.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+>>> base.integer_validator(NULL,4)
+Traceback (most recent call last):
+...
+NameError: name 'NULL' is not defined
+>>> base.integer_validator("num",NULL)
+Traceback (most recent call last):
+...
+NameError: name 'NULL' is not defined
+>>> base.integer_validator("num", None)
+Traceback (most recent call last):
+...
+TypeError: num must be an integer
+>>> base.integer_validator("num", True)
+Traceback (most recent call last):
+...
+TypeError: num must be an integer
+>>> base.integer_validator("num", [2,2])
+Traceback (most recent call last):
+...
+TypeError: num must be an integer
+>>> base.integer_validator("num", (2,))
+Traceback (most recent call last):
+...
+TypeError: num must be an integer
+>>> base.integer_validator("num", {4,5})
+Traceback (most recent call last):
+...
+TypeError: num must be an integer
+>>> base.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+>>> base.integer_validator("num", "3")
+Traceback (most recent call last):
+...
+TypeError: num must be an integer

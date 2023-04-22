@@ -8,5 +8,5 @@ class BaseGeometry:
     """
     This is the BaseGeometry class
     """
-    
+
     pass
