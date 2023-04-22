@@ -88,3 +88,50 @@ class Base:
         instances = [cls.create(**d) for
                      d in cls.from_json_string(json_string)]
         return instances
+    
+     @classmethod
+    def load_from_file(cls):
+        """
+        method that returns list of instances
+        """
+        from os import path
+        file_name = "{}.json".format(cls.__name__)
+        if not path.isfile(file_name):
+            return []
+        with open(file_name, "r", encoding="utf-8") as file:
+            json_string = file.read()
+            instances = []
+        instances = [cls.create(**d) for
+                     d in cls.from_json_string(json_string)]
+        return instances
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        method that serializes to objects
+        """
+        from models.rectangle import Rectangle
+        from models.square import Square
+        file_name = "{}.csv".format(cls.__name__)
+        with open(file_name, "w", encoding="utf-8") as file:
+            file = csv.writer(file)
+            for obj in list_objs:
+                file.writerow([obj])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        method that deserializes from CSV
+        """
+        from models.rectangle import Rectangle
+        from models.square import Square
+        file_name = "{}.csv".format(cls.__name__)
+        with open(file_name, "r", encoding="utf-8") as file:
+            obj = csv.reader(file)
+            dict = {}
+            ret = []
+            for row in obj:
+                if cls is Rectangle:
+                    dict = row
+        return dict
+
