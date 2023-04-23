@@ -8,6 +8,7 @@ import csv module
 import json
 import csv
 import turtle
+import time
 """
 base.py
 """
@@ -135,11 +136,12 @@ class Base:
         """
         tur = turtle.Turtle()
         tur.color("white")
-        tur.pensize(4)
+        turtle.Screen().colormode(255)
+        tur.pensize(2)
         tur.setposition(0, 0)
         for rectangle in list_rectangles:
-            tur.color(rectangle.color)
-            tur.begin_fill()
+            tur.color("blue")
+            tur.setpos((rectangle.x, rectangle.y + tur.pos()[1]))
             tur.forward(rectangle.width)
             tur.right(90)
             tur.forward(rectangle.height)
@@ -149,15 +151,17 @@ class Base:
             tur.forward(rectangle.height)
             tur.end_fill()
         for square in list_squares:
-            tur.color(square.color)
+            tur.color("red")
             tur.begin_fill()
-            tur.forward(square.side)
+            tur.setpos((square.x +tur.pos()[0], square.y -tur.pos()[1]))
+            tur.forward(square.size)
             tur.right(90)
-            tur.forward(square.side)
+            tur.forward(square.size)
             tur.right(90)
-            tur.forward(square.side)
+            tur.forward(square.size)
             tur.right(90)
-            tur.forward(square.side)
+            tur.forward(square.size)
             tur.end_fill()
+        time.sleep(10)
         tur.hideturtle()
-        tur.done()
+        tur.end_fill()
