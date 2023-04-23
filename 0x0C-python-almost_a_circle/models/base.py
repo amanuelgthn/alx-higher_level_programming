@@ -105,7 +105,7 @@ class Base:
                 for obj in list_objs:
                     file.writerow([obj.id, obj.width,
                                    obj.height, obj.x, obj.y])
-            else:
+            elif cls.__name__ == "Square":
                 for obj in list_objs:
                     file.writerow([obj.id, obj.size, obj.x, obj.y])
 
@@ -123,10 +123,12 @@ class Base:
             for row in obj:
                 row = [int(i) for i in row]
                 if cls.__name__ == "Rectangle":
-                    obj = cls(row[1], row[2], row[3], row[4], row[0])
+                    ob = {"id": row[0], "width": row[1], "height": row[2],
+                          "x": row[3], "y": row[4]}
                 else:
-                    obj = cls(row[1], row[2], row[3], row[0])
-                list_obj.append(obj)
+                    ob = {"id": row[0], "size": row[1],
+                          "x": row[2], "y": row[3]}
+                list_obj.append(cls.create(**ob))
             return list_obj
 
     @staticmethod
