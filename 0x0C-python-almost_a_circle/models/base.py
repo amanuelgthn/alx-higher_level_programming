@@ -153,7 +153,7 @@ class Base:
         for square in list_squares:
             tur.color("red")
             tur.begin_fill()
-            tur.setpos((square.x +tur.pos()[0], square.y -tur.pos()[1]))
+            tur.setpos((square.x + tur.pos()[0], square.y - tur.pos()[1]))
             tur.forward(square.size)
             tur.right(90)
             tur.forward(square.size)
