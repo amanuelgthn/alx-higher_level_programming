@@ -2,8 +2,11 @@
 
 >>> text_indentation("""Lorem ipsum. dolor sit: amet, consectetur. adipiscing elit""")
 Lorem ipsum.
+<BLANKLINE>
 dolor sit:
+<BLANKLINE>
 amet, consectetur.
+<BLANKLINE>
 adipiscing elit
 >>> text_indentation(56)
 Traceback (most recent call last):
@@ -17,16 +20,12 @@ TypeError: text must be a string
 Traceback (most recent call last):
 ...
 TypeError: text must be a string
->>> text_indentation(
-"""
-Lorem ipsum. dolor sit: amet, consectetur. adipiscing elit/
-/
-kk/
-"""
-)
+>>> text_indentation("""Lorem ipsum. dolor sit: amet, consectetur.\nadipiscing elit""")
 Lorem ipsum.
+<BLANKLINE>
 dolor sit:
+<BLANKLINE>
 amet, consectetur.
+<BLANKLINE>
+<BLANKLINE>
 adipiscing elit
-
-kk
