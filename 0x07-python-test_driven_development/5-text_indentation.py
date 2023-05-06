@@ -35,5 +35,11 @@ def text_indentation(text):
     else:
         list_split = []
         list_split = split_text(text, [".", ":", "?"])
+        len_list = len(list_split)
+        i = 0
         for item in list_split:
-            print(item)
+            i += 1
+            if i == len_list:
+                print(item, end="")
+            else:
+                print(item)
