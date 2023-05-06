@@ -20,8 +20,8 @@ def split_text(text, symbol):
                 continue
             else:
                 curr_char += char
-    #if curr_char:
-        #result.append(curr_char)
+    if curr_char:
+        result.append(curr_char)
     return result
 
 
