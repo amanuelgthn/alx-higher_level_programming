@@ -15,8 +15,10 @@ def split_text(text, symbol):
                 result.append(curr_char+char)
                 curr_char = ""
         else:
-            #if char != " ":
-            curr_char += char
+            if char == " " and curr_char == "":
+                continue
+            else:
+                curr_char += char
     if curr_char:
         result.append(curr_char)
     return result
