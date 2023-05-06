@@ -13,7 +13,7 @@ def split_text(text, symbol):
     for char in text:
         if char in symbol:
             if curr_char:
-                result.append(curr_char+char)
+                result.append(curr_char+char+"\n")
                 curr_char = ""
         else:
             if char == " " and curr_char == "":
