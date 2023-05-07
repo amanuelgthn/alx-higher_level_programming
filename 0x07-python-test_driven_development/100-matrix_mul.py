@@ -43,10 +43,7 @@ def matrix_mul(m_a, m_b):
         for j in range(0, p):
             c_sum = 0
             for k in range(0, n):
-                c_sum+= m_a[i][k] * m_b[k][j]
+                c_sum += m_a[i][k] * m_b[k][j]
             c.append(c_sum)
         product.append(c)
     return product
-            
-
-
