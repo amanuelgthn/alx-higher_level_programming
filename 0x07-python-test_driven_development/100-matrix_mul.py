@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""M
+"""
 Module containing the matrix_mul function
 """
 
