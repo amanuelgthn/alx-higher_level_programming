@@ -5,4 +5,4 @@ FROM
 GROUP BY
     score
 ORDER BY
-    score;
+    score DESC;
