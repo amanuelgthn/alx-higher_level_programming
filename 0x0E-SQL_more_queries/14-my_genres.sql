@@ -3,6 +3,7 @@
 -- Each record should display: tv_genres.name
 -- Results must be sorted in ascending order by the genre name
 
+USE hbtn_0d_tvshows;
 SELECT tv_genres.name AS name FROM tv_genres
 INNER JOIN tv_show_geners
 ON tv_genres.id = tv_show_genres.genre_id
