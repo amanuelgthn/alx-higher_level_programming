@@ -6,8 +6,6 @@
 -- Results must be sorted in descending order by the number of shows linked
 
 USE hbtn_0d_tvshows;
-SELECT title, tv_show_genres.genre_id FROM tv_shows
-LEFT JOIN tv_show_genres
-ON id=tv_show_genres.show_id
-WHERE tv_show_genres.show_id IS NULL
-ORDER BY title, tv_show_genres.genre_id ASC;
+SELECT tv_genres.name AS genre, COUNT(*) AS number_of_shows FROM tv_genres
+INNER JOIN tv_shows_genres
+ORDER BY number_of_shows
