@@ -7,5 +7,6 @@
 
 USE hbtn_0d_tvshows;
 SELECT tv_genres.name AS genre, COUNT(*) AS number_of_shows FROM tv_genres
-INNER JOIN tv_shows_genres
+INNER JOIN TV_SHOW_
+ON tv_genres.ID =tv_genres
 ORDER BY number_of_shows
