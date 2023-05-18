@@ -1,7 +1,12 @@
 -- a script that lists all shows, and all genres linked to that show, from the database hbtn_0d_tvshows.
-USE hbtn_0d_tvshows;
-SELECT title, tv_show_genres.genre_id FROM tv_shows
+-- If a show doesn’t have a genre, display NULL in the genre column
+-- Each record should display: tv_shows.title - tv_genres.name
+-- Results must be sorted in ascending order by the show title and genre name
+
+SELECT tv_shows.title AS title,tv_genres.name AS name FROM tv_shows
 LEFT JOIN tv_show_genres
-ON id=tv_show_genres.show_id
-WHERE tv_show_genres.show_id IS NULL
-ORDER BY title, tv_show_genres.genre_id ASC;
+ON tv_shows.id=tv_show_genres.show_id
+LEFT JOIN tv_genres
+ON tv_genres.id = tv_show_genres.genre_id
+ORDER BY title, name ASC;
+
