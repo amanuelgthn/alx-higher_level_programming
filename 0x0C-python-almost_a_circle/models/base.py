@@ -8,6 +8,7 @@ import csv module
 import json
 import csv
 import turtle
+import time
 """
 base.py
 """
@@ -104,7 +105,7 @@ class Base:
                 for obj in list_objs:
                     file.writerow([obj.id, obj.width,
                                    obj.height, obj.x, obj.y])
-            else:
+            elif cls.__name__ == "Square":
                 for obj in list_objs:
                     file.writerow([obj.id, obj.size, obj.x, obj.y])
 
@@ -122,10 +123,12 @@ class Base:
             for row in obj:
                 row = [int(i) for i in row]
                 if cls.__name__ == "Rectangle":
-                    obj = cls(row[1], row[2], row[3], row[4], row[0])
+                    ob = {"id": row[0], "width": row[1], "height": row[2],
+                          "x": row[3], "y": row[4]}
                 else:
-                    obj = cls(row[1], row[2], row[3], row[0])
-                list_obj.append(obj)
+                    ob = {"id": row[0], "size": row[1],
+                          "x": row[2], "y": row[3]}
+                list_obj.append(cls.create(**ob))
             return list_obj
 
     @staticmethod
@@ -135,11 +138,12 @@ class Base:
         """
         tur = turtle.Turtle()
         tur.color("white")
-        tur.pensize(4)
+        turtle.Screen().colormode(255)
+        tur.pensize(2)
         tur.setposition(0, 0)
         for rectangle in list_rectangles:
-            tur.color(rectangle.color)
-            tur.begin_fill()
+            tur.color("blue")
+            tur.setpos((rectangle.x, rectangle.y + tur.pos()[1]))
             tur.forward(rectangle.width)
             tur.right(90)
             tur.forward(rectangle.height)
@@ -149,15 +153,17 @@ class Base:
             tur.forward(rectangle.height)
             tur.end_fill()
         for square in list_squares:
-            tur.color(square.color)
+            tur.color("red")
             tur.begin_fill()
-            tur.forward(square.side)
+            tur.setpos((square.x + tur.pos()[0], square.y - tur.pos()[1]))
+            tur.forward(square.size)
             tur.right(90)
-            tur.forward(square.side)
+            tur.forward(square.size)
             tur.right(90)
-            tur.forward(square.side)
+            tur.forward(square.size)
             tur.right(90)
-            tur.forward(square.side)
+            tur.forward(square.size)
             tur.end_fill()
+        time.sleep(10)
         tur.hideturtle()
-        tur.done()
+        tur.end_fill()
