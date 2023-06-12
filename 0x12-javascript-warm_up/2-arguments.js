@@ -6,5 +6,5 @@ if (args.length > 3) {
 } else if (args.length == 3) {
   console.log('Argument found');
 } else {
-    console.log('No argument')
+  console.log('No argument');
 }
