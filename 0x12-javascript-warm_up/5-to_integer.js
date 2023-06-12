@@ -6,7 +6,7 @@
 // You are not allowed to use try/catch
 
 const args = process.argv;
-if (args.length < 3 || isNaN(Number(args[2]))) {
+if (args.length < 3 || isNaN(parseInt(args[2]))) {
   console.log('Not a number');
 } else if (typeof Number(args[2]) === 'number') {
   console.log('%s: %d', 'My Number', Number(args[2]));
