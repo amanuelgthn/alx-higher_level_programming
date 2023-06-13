@@ -14,7 +14,7 @@ if (isNaN(argNum)) {
 }
 else {
     while (i < argNum) {
-        console.log("C is Fun");
+        console.log("C is fun");
         i++;
     }
 }
