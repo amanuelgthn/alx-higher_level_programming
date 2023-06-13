@@ -17,7 +17,7 @@ if (isNaN(argNum)) {
     for (j = 0; j < argNum; j++) {
       process.stdout.write('#');
     }
-    consol.log();
+    console.log();
     i++;
   }
 }
