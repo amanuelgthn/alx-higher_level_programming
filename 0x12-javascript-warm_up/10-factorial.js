@@ -4,6 +4,10 @@
 // Factorial of NaN is 1
 // Using Recursion function
 // console.log() to print all output
-function 
+function printFactorial(num) {
+  if (num === NaN)
+    return 1;
+  
+}
 numArgs = process.argv;
 num = Number(numArgs[2];
