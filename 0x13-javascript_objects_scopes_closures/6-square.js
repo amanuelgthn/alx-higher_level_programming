@@ -15,7 +15,7 @@ class Square extends Rectangle {
       char = 'X';
     }
     while (i < this.height) {
-      for (j = 0; j < this.width; j++) {
+      for (j = 0; j < this.height; j++) {
         process.stdout.write(char);
       }
       console.log();
