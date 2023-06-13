@@ -14,7 +14,7 @@ if (isNaN(argNum)) {
   console.log('Missing size');
 } else {
   while (i < argNum) {
-    for (j = 0; j < argNum; i++) {
+    for (j = 0; j < argNum; j++) {
       process.stdout.write('#');
     }
     consol.log();
