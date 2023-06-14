@@ -4,5 +4,5 @@
 let count = 0;
 exports.logme = function (item) {
   count += 1;
-  console.log('%d: %s", count, item);
+  console.log('%d: %s', count, item);
               }
