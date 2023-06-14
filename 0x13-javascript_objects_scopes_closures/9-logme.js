@@ -3,6 +3,6 @@
 // Output format: <number of arguments already printed>: <current argument value>
 let count = 0;
 exports.logMe = function (item) {
-  count += 1;
   console.log('%d: %s', count, item);
+  count += 1;
 };
