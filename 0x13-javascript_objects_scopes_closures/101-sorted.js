@@ -4,12 +4,11 @@
 // print the new dictionary at the end
 const dict = require('./101-data.js').dict;
 const key = Object.keys(dict);
-const value = Object.values(dict);
 const newDict = {};
-for (const item of value) {
-  if (!newDict[item]) {
-    newDict[item] = [];
+for (const item of key) {
+  if (!newDict[dict[item]]) {
+    newDict[dict[item]] = [];
   }
-  newDict[item].push(key[item]);
+  newDict[dict[item]].push(item);
 }
 console.log(newDict);
