@@ -5,7 +5,7 @@ exports.esrever = function (list) {
     const lenList = list.length;
     let i = 0;
     while (i < lenList) {
-        arr[i] = list[lenList - I - 1]
+        arr[i] = list[lenList - i - 1]
       i++;
     }
     return arr;
