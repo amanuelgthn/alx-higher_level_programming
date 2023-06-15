@@ -12,7 +12,7 @@ if (lenArgs < 4) {
   for (; i < lenArgs; i++) {
     argList.push(args[i]);
   }
-  argList.sort();
+  argList.sort((a, b) => a - b);
   const lenList = argList.length;
   console.log(argList[lenList - 2]);
 }
