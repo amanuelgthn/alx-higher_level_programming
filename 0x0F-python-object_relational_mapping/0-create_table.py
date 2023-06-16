@@ -4,6 +4,7 @@
 This script creates a table called `song` in the database `hbtn_0e_0_usa`.
 """
 
+import sys
 import MySQLdb
 
 db = MySQLdb.connect(host='localhost', user='root', port=3306, passwd='root',db='hbtn_0e_0_usa')
