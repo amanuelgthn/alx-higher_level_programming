@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 A script that takes in arguments and displays all calues in the states
-table of hbtn_0e_0_usa where the name matches the argument and 
+table of hbtn_0e_0_usa where the name matches the argument and
 that is safe from MySQL injections.
 """
 
