@@ -6,7 +6,7 @@ This script creates a table called `song` in the database `hbtn_0e_0_usa`.
 
 import MySQLdb
 
-db = MySQLdb.connect(host='localhost', user='aman', passwd='AAaa222!!',db='hbtn_0e_0_usa')
+db = MySQLdb.connect(host='localhost', user='root', port=3306, passwd='root',db='hbtn_0e_0_usa')
 cur = db.cursor()
 
 # Create the database if it doesn't already exist
