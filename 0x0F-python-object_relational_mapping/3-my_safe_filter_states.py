@@ -15,7 +15,7 @@ if __name__ == "__main__":
     cur = db.cursor()
     query = """SELECT * FROM states WHERE name = %s"""
     name = format(sys.argv[4]).encode('utf-8')
-    0x0F-python-object_relational_mapping
+    cur.execute(query, (name,))
     states = cur.fetchall()
     for item in states:
         print(item)
