@@ -19,7 +19,7 @@ if __name__ == "__main__":
         JOIN states\
             ON cities.state_id = states.id\
             WHERE BINARY states.name = %s\
-            ORDER BY cities.id ASC"""
+            ORDER BY cities.id ASC;"""
     name = format(sys.argv[4]).encode('utf-8')
     cur.execute(query, (name,))
     states = cur.fetchall()
