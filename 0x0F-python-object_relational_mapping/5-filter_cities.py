@@ -30,5 +30,3 @@ if __name__ == "__main__":
             continue
         print('{}'.format(item[0]), end=", ")
         i += 1
-    cur.close()
-    db.close()
