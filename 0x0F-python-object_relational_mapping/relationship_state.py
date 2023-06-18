@@ -17,11 +17,10 @@
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy import create_engine
+from sqlalchemy.orm import relationship
+from relationship_city import City, Base
 import sys
 import MySQLdb
-
-
-Base = declarative_base()
 
 
 class State(Base):
@@ -30,10 +29,8 @@ class State(Base):
     """
 
     __tablename__ = 'states'
-    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
+    id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
-    cities_id = Column(Integer, ForeignKey('cities.id'))
-    cities = relationship('City', back_populates='State')
-
-    def __init__(self, name):
-        self.name = name
+    
+    cities = relationship("City", backref="state")
+    
