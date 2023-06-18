@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-a script that lists all State objects, and corresponding city objects contained in the databaese hbtn_0e_101_usa
+a script that lists all State objects, and corresponding city objects
+contained in the databaese hbtn_0e_101_usa
 - takes 3 argumetns: mysql username, mysql password, and database name
 - connects to MySQL server to localhost:3306
 - only uses one query
@@ -21,9 +22,8 @@ if __name__ == '__main__':
         sys.argv[1], sys.argv[2], sys.argv[3]))
     session = scoped_session(sessionmaker(bind=engine))
     Base.metadata.create_all(engine)
-    states = session.query(State).join(City).all()
+    states = session.query(State).join(City).order_by(State.id, City.id).all()
     for state in states:
         print('{}: {}'.format(state.id, state.name))
         for city in state.cities:
-            print('\t{}: {}'.format(city.id, city.name))
-            
+            print('    {}: {}'.format(city.id, city.name))
