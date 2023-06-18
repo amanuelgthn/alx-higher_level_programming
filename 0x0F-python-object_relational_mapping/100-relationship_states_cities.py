@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """
-A script that creates the State "California" with the City "San Francisco" from the database htbtn_0e_100_usa
+A script that creates the State "California" with the City "San Francisco"
+from the database htbtn_0e_100_usa
 - Takes 3 arguments: mysql username, mysql password, database name
 - connects to MySQL server running on localhost:3306
-- use the cities relationship for all State 
+- use the cities relationship for all State
 """
 
 
@@ -21,10 +22,7 @@ if __name__ == '__main__':
     session = scoped_session(sessionmaker(bind=engine))
     Base.metadata.create_all(engine)
     state = State(name='California')
+    state.cities = [City(name='San Francisco')]
     session.add(state)
-    city = City(name='San Francisco')
-    session.add(city)
     session.commit()
     session.close()
-    
-   

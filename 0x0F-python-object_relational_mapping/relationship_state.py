@@ -9,8 +9,10 @@
       unique integer and can't b null and is a primary key
     - class attribute name that represents a column of a string with
       maximum 128 characters and can't be null
-    - class attribute cities represents a relationship with the class City. If the State object is deleted
-      all linked City objects are automatically deleted. The reference from a City object to this State named state
+    - class attribute cities represents a relationship with the class City.
+      If the State object is deleted
+      all linked City objects are automatically deleted. The reference from
+      a City object to this State named state
 """
 
 
@@ -31,6 +33,5 @@ class State(Base):
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
-    
-    cities = relationship("City", backref="state")
-    
+
+    cities = relationship("City", backref="state", cascade="all, delete")
