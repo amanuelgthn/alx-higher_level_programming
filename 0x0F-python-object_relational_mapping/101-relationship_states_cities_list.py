@@ -13,8 +13,10 @@ contained in the databaese hbtn_0e_101_usa
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import session
 from sqlalchemy.orm import scoped_session
-from relationship_state import State, City, Base
+from relationship_state import State, Base
+from relationship_city import City
 
 
 if __name__ == '__main__':
