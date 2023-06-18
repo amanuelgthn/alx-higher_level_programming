@@ -24,9 +24,14 @@ if __name__ == "__main__":
     cur.execute(query, (name,))
     states = cur.fetchall()
     i = 0
+    printed = False
     for item in states:
         if (i == len(states) - 1):
             print('{}'.format(item[0]))
+            printed = True
             continue
         print('{}'.format(item[0]), end=", ")
+        printed = True
         i += 1
+    if printed is False:
+        print()
