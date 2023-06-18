@@ -23,6 +23,6 @@ if __name__ == '__main__':
     session = scoped_session(sessionmaker(bind=engine))
     states = session.query(State).where(State.id == 1).first()
     if states.id is None:
-        print()
+        print("Nothing")
     else:
         print('{}: {}'.format(states.id, states.name))
