@@ -22,4 +22,7 @@ if __name__ == '__main__':
         sys.argv[1], sys.argv[2], sys.argv[3]))
     session = scoped_session(sessionmaker(bind=engine))
     states = session.query(State).where(State.id == 1).first()
+    if states is None:
+        print()
+        return
     print('{}: {}'.format(states.id, states.name))
