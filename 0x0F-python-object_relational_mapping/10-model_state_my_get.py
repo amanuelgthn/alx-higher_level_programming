@@ -33,4 +33,4 @@ if __name__ == "__main__":
             print(state.id)
             printed = True
     if not printed:
-        print("Not Found")
+        print("Not found")
