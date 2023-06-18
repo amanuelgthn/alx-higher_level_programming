@@ -21,7 +21,8 @@ if __name__ == "__main__":
         sys.argv[1], sys.argv[2], sys.argv[3]))
     session = scoped_session(sessionmaker(bind=engine))
     Base.metadata.create_all(engine)
-    session.add(State(name='Louisiana'))
+    louisiana = State(name="Louisiana")
+    session.add(louisiana)
     session.commit()
     session.close()
     states = session.query(State).order_by(State.id).filter(
