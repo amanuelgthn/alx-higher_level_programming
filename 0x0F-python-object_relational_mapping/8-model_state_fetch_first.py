@@ -24,5 +24,5 @@ if __name__ == '__main__':
     states = session.query(State).where(State.id == 1).first()
     if states is None:
         print()
-        return
-    print('{}: {}'.format(states.id, states.name))
+    else:
+        print('{}: {}'.format(states.id, states.name))
