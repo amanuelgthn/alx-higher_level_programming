@@ -21,5 +21,5 @@ if __name__ == '__main__':
         sys.argv[1], sys.argv[2], sys.argv[3], pool_pre_ping=True))
     session = scoped_session(sessionmaker(bind=engine))
     cities = session.query(State, City).filter(State.id == City.state_id).all()
-    for city, state in cities:
+    for state, city in cities:
         print('{}: ({}) {}'.format(state.name, city.id, city.name))
