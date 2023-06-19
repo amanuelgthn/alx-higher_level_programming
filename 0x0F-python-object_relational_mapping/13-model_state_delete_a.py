@@ -22,6 +22,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     states = session.query(State).filter(State.name.contains('a'))
     for state in states:
-      session.delete(state)
+        session.delete(state)
     session.commit()
     session.close()
