@@ -20,7 +20,7 @@ if __name__ == "__main__":
             sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
     session = scoped_session(sessionmaker(bind=engine))
     Base.metadata.create_all(engine)
-    states = session.query(State)
+    states = session.query(State).all()
     for state in states:
         if "a" in state.name:
             session.delete(state)
