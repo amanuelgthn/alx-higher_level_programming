@@ -1,3 +1,3 @@
 #!/bin/bash
 #Bash script that takes a URL,sends a request to that URL and displays the size of the body of the response
-curl -sI "$1" | grep ^Content-length:\d+$ | grep \d+$
+curl -sI "$1" | grep ^Content-Length:\d+$ | grep \d+$
