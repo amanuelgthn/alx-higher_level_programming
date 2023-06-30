@@ -3,5 +3,5 @@
 #Size displayed in bytes
 Arg=$1
 response=$(curl -s "$Arg")
-parse_response=$(echo "$response" | jq '.content-length')
+parse_response=$(echo "$response" | grep -i 'content-length')
 echo "$parse_response"
