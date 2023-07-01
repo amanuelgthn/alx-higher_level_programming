@@ -10,6 +10,8 @@ if __name__ == '__main__':
     from sys import argv
 
     url = argv[1]
-    response = requests.get(url)
-    if hasattr(response, 'X-Request-Id'):
+    try:
+        response = requests.get(url)
         print(response.headers['X-Request-Id'])
+    except KeyError:
+        pass
