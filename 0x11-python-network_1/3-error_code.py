@@ -16,6 +16,7 @@ if __name__ == '__main__':
     req = Request(url)
     try:
         with urlopen(req) as response:
-            print(response.read())
+            page = response.read()
+            print(page.decode(utf-8))
     except HTTPError as e:
         print('Error code: {}'.format(e.code))
