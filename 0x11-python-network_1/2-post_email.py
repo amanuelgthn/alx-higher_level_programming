@@ -15,7 +15,8 @@ if __name__ == "__main__":
     url = sys.argv[1]
     email = {'email': str(sys.argv[2])}
     data = urlencode(email)
-    url_ful = url + '?' + data
-    with urlopen(url_ful) as response:
+    data = data.encode('ascii')
+    req = Request(url, data=data)
+    with urlopen(req) as response:
         page = response.read()
         print(page.decode('utf-8'))
