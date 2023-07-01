@@ -11,4 +11,5 @@ if __name__ == '__main__':
 
     url = argv[1]
     response = requests.get(url)
-    print(response.headers['X-Request-Id'])
+    if hasattr(response, 'X-Request-Id'):
+        print(response.headers['X-Request-Id'])
