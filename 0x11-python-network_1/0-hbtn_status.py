@@ -14,6 +14,6 @@ if __name__ == '__main__':
     with urlopen(request) as response:
         page = response.read()
         print("Bpdy response:")
-        print('\t- type: {}'.format(type(page)))
-        print('\t- content: {}'.format(page))
-        print('\t- utf8 content: {}'.format(page.decode('utf8')))
+        print('\t-type: {}'.format(type(page)))
+        print('\t-content: {}'.format(page))
+        print('\t-utf8 content: {}'.format(page.decode('utf8')))
