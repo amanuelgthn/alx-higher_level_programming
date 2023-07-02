@@ -26,6 +26,6 @@ if __name__ == "__main__":
         if json_dict is None:
             print('No result')
         else:
-            print('[{}] {}'.format(json_dict[id], json_dict[name]))
+            print('[{}] {}'.format(json_dict['id'], json_dict['name']))
     except Exception:
         print('Not a valid JSON')
