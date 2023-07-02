@@ -1,3 +1,3 @@
-#!bin/bash
+#!/bin/bash
 #Bash script that sends a request to a URL passed as an argument, and displays only the status code of the response
-curl -sLX HEAD -w "%{http_code}" "$1"
+curl -sI "$1" | cut -d ' ' -f 2 | head -n 1
