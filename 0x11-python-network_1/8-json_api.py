@@ -23,7 +23,7 @@ if __name__ == "__main__":
     request = requests.post(url, data=q)
     try:
         json_dict = request.json()
-        if json_dict is None:
+        if json_dict == {}:
             print('No result')
         else:
             print('[{}] {}'.format(json_dict['id'], json_dict['name']))
