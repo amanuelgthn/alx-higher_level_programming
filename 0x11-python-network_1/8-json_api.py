@@ -15,11 +15,10 @@ if __name__ == "__main__":
     from sys import argv
     import requests
 
-
     url = 'http://0.0.0.0:5000/search_user'
-    try:
+    if len(argv) > 1:
         q = {'q': argv[1]}
-    except IndexError:
+    else:
         q = {'q': ''}
     request = requests.post(url, data=q)
     try:
@@ -28,5 +27,5 @@ if __name__ == "__main__":
             print('No result')
         else:
             print('[{}] {}'.format(json_dict[id], json_dict[name]))
-    except Exception as e:
+    except Exception:
         print('Not a valid JSON')
