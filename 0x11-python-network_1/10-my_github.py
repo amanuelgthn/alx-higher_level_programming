@@ -13,8 +13,6 @@ if __name__ == '__main__':
     password = argv[2]
     url = 'https://api.github.com/users/octocat'
     response = requests.get(url, auth=(username, password))
-    user_id = response.json()
-    try:
-        print(user_id['id'])
-    except Exception:
-        print('None')
+    user_id = response.json().get("id")
+    if user_id:
+        print(user_id)
