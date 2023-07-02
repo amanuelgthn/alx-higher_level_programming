@@ -11,7 +11,7 @@ if __name__ == '__main__':
 
     username = argv[1]
     password = argv[2]
-    url = 'https://api.github.com'
+    url = 'https://api.github.com/users/octocat'
     response = requests.get(url, auth=(username, password))
     user_id = response.json()
     try:
