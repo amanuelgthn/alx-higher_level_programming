@@ -8,11 +8,15 @@ uses the GitHub API to display your id
 if __name__ == '__main__':
     from sys import argv
     import requests
+    from requests.auth import HTTPBasicAuth
 
-    username = argv[1]
-    password = argv[2]
-    url = 'https://api.github.com/users/octocat'
-    response = requests.get(url, auth=(username, password))
-    user_id = response.json().get("id")
-    if user_id:
+    username = str(argv[1])
+    password = str(argv[2])
+    basic = (username, password)
+    url = 'https://api.github.com/user'
+    response = requests.get(url, auth=basic)
+    try:
+        user_id = response.json()['id']
         print(user_id)
+    except KeyError:
+        print('None')
