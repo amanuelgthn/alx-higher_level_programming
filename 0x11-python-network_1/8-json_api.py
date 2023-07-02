@@ -18,9 +18,9 @@ if __name__ == "__main__":
 
     url = 'http://0.0.0.0:5000/search_user'
     try:
-        q = argv[1]
+        q = {'q': argv[1]}
     except IndexError:
-        q = ""
+        q = {'q': ''}
     request = requests.post(url, data=q)
     try:
         json_dict = request.json()
