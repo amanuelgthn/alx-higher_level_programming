@@ -9,22 +9,25 @@ Python script that takes in a letter and sends POST request to
 -- Display Not a valid JSON if the JSON is invalid
 -- Display No result if the JSON id empty
 """
-import json
-from sys import argv
-import requests
 
 
-url = 'http://0.0.0.0:5000/search_user'
-try:
+if __name__ == "__main__":
+    import json
+    from sys import argv
+    import requests
+
+
+    url = 'http://0.0.0.0:5000/search_user'
+    try:
     q = argv[1]
-except IndexError:
+    except IndexError:
     q = ""
-request = requests.post(url, data=q)
-try:
+    request = requests.post(url, data=q)
+    try:
     json_dict = json.loads(str(request.text))
     if json_dict is None:
-        print('No result')
+    print('No result')
     else:
-        print('[{}] {}'.format(json_dict[id], json_dict[name]))
-except Exception as e:
+    print('[{}] {}'.format(json_dict[id], json_dict[name]))
+    except Exception as e:
     print('Not a valid JSON')
