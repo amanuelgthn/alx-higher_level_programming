@@ -17,6 +17,9 @@ request(url, (err, response) => {
     while (j < jsonBody.length) {
       if (i !== jsonBody[j].userId) {
         i = jsonBody[j].userId;
+        if (i == 0 && jsonBody[j].userId === i) {
+            count = 1;
+        }
         if (count > 0) {
           countLog.push(count);
           if (i === jsonBody[j].userId && jsonBody[j].completed === true) {
