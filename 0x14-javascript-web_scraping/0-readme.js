@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-let file = require('fs');
+const file = require('fs');
 
 file.readFile(process.argv[2], function (err, buf) {
   if (!err) {
